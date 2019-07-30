@@ -1,0 +1,19 @@
+{
+  "name": "business-data",
+  "version": "1.0.0",
+  "description": "Business prototype tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beccashieh/Business-data.git"
+  },
+  "author": "Becca Shieh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beccashieh/Business-data/issues"
+  },
+  "homepage": "https://github.com/beccashieh/Business-data#readme"
+}
