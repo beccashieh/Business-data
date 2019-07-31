@@ -1,40 +1,53 @@
 import React, { Component } from "react";
 import "./style.css";
+import AddBusiness from "../Modals/Add";
 
 class Jumbotron extends Component {
-    constructor(props) {
-        super(props);
-        this.handleView =  this.handleView.bind(this);
-        this.handleEdit = this.handleEdit.bind(this);
-        this.handleAdd = this.handleAdd.bind(this);
-        this.handleRemove = this.handleRemove.bind(this);
-        this.state = {
-            viewClicked: false,
-            editClicked: false,
-            addClicked: false,
-            removeClicked: false,
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.handleView = this.handleView.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
+    this.state = {
+      viewClicked: false,
+      editClicked: false,
+      addClicked: false,
+      removeClicked: false,
+      businessName: "",
+      businessPhone: "",
+      address: "",
+      status: "",
+      contact: "",
+      financialPerformance: ""
+    };
+  }
 
-    handleView() {
-        this.setState({viewClicked: true});
-        console.log("view businesses");
-    }
+  handleView() {
+    this.setState({ viewClicked: true });
+    console.log("view businesses");
+  }
 
-    handleEdit() {
-        this.setState({editClicked: true});
-        console.log("edit businesses")
-    }
+  handleEdit() {
+    this.setState({ editClicked: true });
+    console.log("edit businesses");
+  }
 
-    handleAdd() {
-        this.setState({addClicked: true});
-        console.log("add businesses");
-    }
+  handleAdd() {
+    this.setState({ addClicked: true });
+    console.log("add businesses");
+  }
 
-    handleRemove() {
-        this.setState({removeClicked: true});
-        console.log("remove businesses")
-    }
+  handleChange = e => {
+    this.setState({
+      [e.target.id]: e.target.value
+    });
+  };
+
+  handleRemove() {
+    this.setState({ removeClicked: true });
+    console.log("remove businesses");
+  }
 
   render() {
     return (
@@ -55,22 +68,14 @@ class Jumbotron extends Component {
         </button>
         <button
           className="btn btn-info btn-lg"
-          data-toggle="modal" 
+          data-toggle="modal"
           data-target="#editModal"
           id="edit"
           onClick={this.handleEdit}
         >
           Edit Businesses
         </button>
-        <button
-          className="btn btn-info btn-lg"
-          data-toggle="modal" 
-          data-target="#addModal"
-          id="add"
-          onClick={this.handleAdd}
-        >
-          Add a Business
-        </button>
+        <AddBusiness onClick={this.handleAdd} />
         <button
           className="btn btn-info btn-lg"
           id="remove"

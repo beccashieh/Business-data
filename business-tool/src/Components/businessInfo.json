@@ -1,5 +1,6 @@
 [
     {
+        "key": 1,
         "name": "Hot Dog Emporium",
         "phone": "678-111-2222",
         "address": "123 Main Street, Atlanta, GA 30008",
@@ -8,6 +9,7 @@
         "financialPerformance": "excellent"
     },
     {
+        "key": 2,
         "name": "Burger Shack",
         "phone": "404-222-3333",
         "address": "1 North Ave, Atlanta, GA 30318",
@@ -16,6 +18,7 @@
         "financialPerformance": "average"
     },
     {
+        "key": 3,
         "name": "Pasta Place",
         "phone": "770-555-4444",
         "address": "23 Nowhere Street, Somewhere, GA 30005",
